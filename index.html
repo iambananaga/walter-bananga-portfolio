@@ -6,60 +6,51 @@
     <title>Walter Timilay Bananga | Data Analyst & IT</title>
     <meta
       name="description"
-      content="Portfolio of Walter Timilay Bananga, Data Analyst and IT professional specializing in data analysis, dashboard reporting, web development and IT support."
+      content="Portfolio of Walter Timilay Bananga, Data Analyst and IT professional specializing in data analysis, web design, graphic design, and IT support."
     />
     <style>
       :root {
-        --bg: #060b17;
-        --bg-soft: #101a2d;
-        --panel: #0f1d32;
-        --panel-alt: #162742;
+        --bg: #040b16;
+        --bg-soft: #0d1a2d;
+        --panel: #101d32;
+        --panel-strong: #132849;
         --primary: #123d76;
-        --primary-soft: #1a5aa6;
-        --accent: #dfe9f7;
-        --text: #eaf2ff;
-        --muted: #b5c7df;
-        --line: rgba(255, 255, 255, 0.12);
-        --shadow: 0 20px 45px rgba(3, 8, 18, 0.45);
+        --primary-soft: #1d5ea8;
+        --text: #edf5ff;
+        --muted: #b4c7dd;
+        --line: rgba(255,255,255,0.12);
+        --glow: rgba(133, 184, 255, 0.42);
+        --gold: #d7b26d;
+        --shadow: 0 18px 40px rgba(0,0,0,0.35);
       }
 
-      * {
-        box-sizing: border-box;
-      }
-
-      html {
-        scroll-behavior: smooth;
-      }
-
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
       body {
         margin: 0;
         font-family: Arial, Helvetica, sans-serif;
-        background: linear-gradient(180deg, #040b14 0%, #0b1422 100%);
+        background:
+          radial-gradient(circle at top left, rgba(24,52,90,0.9), transparent 30%),
+          radial-gradient(circle at bottom right, rgba(21,78,141,0.55), transparent 28%),
+          linear-gradient(180deg, #040b16 0%, #0b1525 100%);
         color: var(--text);
         line-height: 1.6;
       }
 
-      a {
-        text-decoration: none;
-        color: inherit;
-      }
-
-      img {
-        max-width: 100%;
-        display: block;
-      }
+      a { text-decoration: none; color: inherit; }
+      img { max-width: 100%; display: block; }
 
       .container {
-        width: min(1100px, calc(100% - 32px));
+        width: min(1120px, calc(100% - 32px));
         margin: 0 auto;
       }
 
       .site-header {
         position: sticky;
         top: 0;
-        z-index: 50;
-        backdrop-filter: blur(12px);
-        background: rgba(6, 11, 23, 0.8);
+        z-index: 40;
+        backdrop-filter: blur(10px);
+        background: rgba(4, 11, 22, 0.78);
         border-bottom: 1px solid var(--line);
       }
 
@@ -71,16 +62,16 @@
       }
 
       .brand {
-        font-size: 1.15rem;
-        font-weight: 700;
-        letter-spacing: 0.08em;
+        font-size: 1.08rem;
+        font-weight: 800;
+        letter-spacing: 0.12em;
         text-transform: uppercase;
       }
 
       .nav-links {
         display: flex;
-        gap: 24px;
-        font-size: 0.95rem;
+        gap: 22px;
+        flex-wrap: wrap;
         color: var(--muted);
       }
 
@@ -88,65 +79,62 @@
         transition: color 0.2s ease;
       }
 
-      .nav-links a:hover {
-        color: var(--text);
-      }
+      .nav-links a:hover { color: var(--text); }
 
       .hero {
-        padding: 80px 0 50px;
+        padding: 84px 0 52px;
       }
 
       .hero-inner {
         display: grid;
         grid-template-columns: 1.4fr 0.9fr;
-        align-items: center;
         gap: 36px;
+        align-items: center;
       }
 
       .eyebrow {
         display: inline-block;
-        color: var(--accent);
-        background: rgba(255, 255, 255, 0.05);
-        border: 1px solid var(--line);
-        padding: 8px 14px;
+        padding: 10px 16px;
         border-radius: 999px;
-        font-size: 0.78rem;
-        letter-spacing: 0.08em;
+        background: rgba(255,255,255,0.04);
+        border: 1px solid var(--line);
+        font-size: 0.72rem;
+        letter-spacing: 0.12em;
         text-transform: uppercase;
+        color: var(--gold);
       }
 
       h1 {
-        font-size: clamp(2.5rem, 6vw, 4.6rem);
-        line-height: 1.05;
-        margin: 18px 0 14px;
-        letter-spacing: -0.05em;
+        margin: 18px 0 16px;
+        font-size: clamp(2.7rem, 5vw, 5rem);
+        line-height: 1.02;
+        letter-spacing: -0.06em;
       }
 
       .highlight {
-        color: #90b7ff;
+        color: #9bc0ff;
       }
 
       .lead {
-        max-width: 620px;
-        font-size: 1.08rem;
+        max-width: 630px;
         color: var(--muted);
-        margin-bottom: 28px;
+        font-size: 1.08rem;
       }
 
       .cta-row {
         display: flex;
         gap: 18px;
         flex-wrap: wrap;
-        margin-top: 12px;
+        margin-top: 26px;
       }
 
       .btn {
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        min-height: 48px;
+        min-height: 50px;
         padding: 0 20px;
-        border-radius: 10px;
+        border-radius: 12px;
         font-weight: 700;
         transition: transform 0.2s ease, box-shadow 0.2s ease;
       }
@@ -156,134 +144,139 @@
       }
 
       .btn-primary {
-        background: linear-gradient(135deg, var(--primary-soft), #5a8fe0);
-        color: white;
-        box-shadow: var(--shadow);
+        background: linear-gradient(135deg, var(--primary-soft), #6ea2f8);
+        box-shadow: 0 16px 32px rgba(33, 94, 167, 0.3);
       }
 
       .btn-secondary {
+        background: rgba(255,255,255,0.03);
         border: 1px solid var(--line);
-        background: rgba(255, 255, 255, 0.02);
-        color: var(--text);
       }
 
       .hero-card {
-        background: linear-gradient(180deg, rgba(19, 39, 64, 0.96), rgba(12, 20, 34, 0.96));
+        position: relative;
+        background: linear-gradient(180deg, rgba(18, 35, 58, 0.95), rgba(9,17,29,0.93));
         border: 1px solid var(--line);
-        border-radius: 22px;
+        border-radius: 26px;
         box-shadow: var(--shadow);
         overflow: hidden;
       }
 
+      .hero-card::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(135deg, rgba(139, 176, 255, 0.16), transparent 60%);
+        pointer-events: none;
+      }
+
       .card-top {
-        background: linear-gradient(135deg, #173c67, #0e2140);
+        position: relative;
+        background: linear-gradient(135deg, #183f6b, #0d223d);
         padding: 24px 26px;
         border-bottom: 1px solid var(--line);
       }
 
       .card-top h3 {
         margin: 0;
-        font-size: 1rem;
-        letter-spacing: 0.06em;
+        font-size: 0.82rem;
+        letter-spacing: 0.15em;
         text-transform: uppercase;
-        color: #d7e8ff;
+        color: #dfeffc;
       }
 
       .profile-box {
+        position: relative;
         padding: 26px;
       }
 
       .profile-grid {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 18px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
       }
 
       .mini-stat {
-        background: rgba(255, 255, 255, 0.03);
+        background: rgba(255,255,255,0.04);
         border: 1px solid var(--line);
-        border-radius: 16px;
+        border-radius: 18px;
         padding: 18px;
       }
 
       .number {
-        font-size: 1.7rem;
-        font-weight: 700;
-        margin-bottom: 6px;
+        font-size: 1.9rem;
+        font-weight: 800;
+        margin-bottom: 8px;
       }
 
       .label {
-        color: var(--muted);
-        font-size: 0.8rem;
-        letter-spacing: 0.04em;
+        font-size: 0.72rem;
+        letter-spacing: 0.08em;
         text-transform: uppercase;
+        color: var(--muted);
       }
 
       section {
-        padding: 32px 0 20px;
+        padding: 36px 0 18px;
       }
 
       .section-title {
         display: flex;
         align-items: center;
         gap: 12px;
-        font-size: 1.5rem;
-        font-weight: 700;
         margin: 0 0 22px;
+        font-size: 1.7rem;
+        font-weight: 700;
       }
 
       .section-title::before {
         content: "";
         width: 12px;
         height: 12px;
-        background: linear-gradient(135deg, #7db2ff, #234e8e);
+        background: linear-gradient(135deg, #81b2ff, #1b4f9c);
         border-radius: 50%;
-        display: inline-block;
-        box-shadow: 0 0 18px rgba(125, 178, 255, 0.7);
+        box-shadow: 0 0 18px rgba(129,178,255,0.8);
       }
 
       .about-grid,
-      .content-grid {
+      .content-grid,
+      .contact-grid {
         display: grid;
-        grid-template-columns: 1.1fr 1fr;
-        gap: 28px;
+        grid-template-columns: 1.2fr 1fr;
+        gap: 26px;
       }
 
       .panel {
-        background: rgba(17, 25, 38, 0.92);
+        background: rgba(16, 29, 50, 0.96);
         border: 1px solid var(--line);
         border-radius: 18px;
-        padding: 26px 24px;
+        padding: 24px 22px;
         box-shadow: var(--shadow);
       }
 
-      .panel p {
-        margin: 0;
-        color: var(--muted);
-        font-size: 1rem;
-      }
+      .panel p { margin: 0; color: var(--muted); }
 
       .info-list {
         list-style: none;
-        padding: 0;
         margin: 0;
+        padding: 0;
         display: grid;
-        gap: 14px;
+        gap: 12px;
       }
 
       .info-list li {
-        background: rgba(255, 255, 255, 0.025);
-        border: 1px solid var(--line);
-        border-radius: 12px;
-        padding: 12px 14px;
         display: flex;
         justify-content: space-between;
-        gap: 24px;
+        gap: 18px;
+        padding: 12px 14px;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        background: rgba(255,255,255,0.02);
       }
 
       .info-list span:first-child {
-        color: var(--text);
         font-weight: 700;
+        color: var(--text);
       }
 
       .info-list span:last-child {
@@ -298,11 +291,11 @@
       }
 
       .skill-chip {
-        background: rgba(125, 178, 255, 0.11);
-        border: 1px solid rgba(125, 178, 255, 0.35);
-        color: #eaf3ff;
-        border-radius: 999px;
         padding: 10px 14px;
+        border-radius: 999px;
+        border: 1px solid rgba(157, 201, 255, 0.35);
+        background: rgba(125, 178, 255, 0.08);
+        color: #edf6ff;
         font-size: 0.9rem;
       }
 
@@ -315,7 +308,7 @@
 
       .project-card,
       .exp-card {
-        background: rgba(17, 25, 38, 0.92);
+        background: rgba(16, 29, 50, 0.96);
         border: 1px solid var(--line);
         border-radius: 18px;
         padding: 22px;
@@ -325,7 +318,7 @@
       .project-card h3,
       .exp-card h3 {
         margin: 0 0 8px;
-        font-size: 1.3rem;
+        font-size: 1.28rem;
       }
 
       .project-card p,
@@ -338,22 +331,22 @@
         display: flex;
         flex-wrap: wrap;
         gap: 8px;
-        margin: 14px 0 0;
+        margin-top: 16px;
       }
 
       .project-meta span {
-        background: rgba(255, 255, 255, 0.04);
         border: 1px solid var(--line);
         border-radius: 999px;
+        background: rgba(255,255,255,0.04);
         padding: 7px 10px;
-        font-size: 0.75rem;
-        color: #dfeafc;
+        font-size: 0.74rem;
+        color: #deebff;
       }
 
       .project-link {
         display: inline-block;
-        margin-top: 16px;
-        color: #a8d0ff;
+        margin-top: 18px;
+        color: #a8d1ff;
         font-weight: 700;
       }
 
@@ -362,33 +355,25 @@
         padding-left: 18px;
       }
 
-      .contact-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 24px;
-      }
-
       .contact-item {
         display: flex;
-        gap: 12px;
         align-items: center;
+        gap: 14px;
         padding: 16px 0;
         border-bottom: 1px solid var(--line);
       }
 
-      .contact-item:last-child {
-        border-bottom: none;
-      }
+      .contact-item:last-child { border-bottom: none; }
 
       .contact-icon {
         width: 42px;
         height: 42px;
-        border-radius: 12px;
         display: flex;
         align-items: center;
         justify-content: center;
-        background: rgba(125, 178, 255, 0.12);
-        border: 1px solid rgba(125, 178, 255, 0.25);
+        border-radius: 12px;
+        background: rgba(125,178,255,0.12);
+        border: 1px solid rgba(125,178,255,0.3);
         font-weight: 700;
       }
 
@@ -398,11 +383,11 @@
       }
 
       .footer {
+        padding: 24px 0 38px;
+        text-align: center;
+        color: var(--muted);
         border-top: 1px solid var(--line);
         margin-top: 28px;
-        padding: 22px 0 40px;
-        color: var(--muted);
-        text-align: center;
       }
 
       @media (max-width: 900px) {
@@ -416,23 +401,14 @@
         }
 
         .nav {
-          flex-wrap: wrap;
           justify-content: center;
+          flex-wrap: wrap;
           gap: 12px;
           padding: 12px 0;
-        }
-
-        .nav-links {
-          flex-wrap: wrap;
-          justify-content: center;
         }
       }
 
       @media (max-width: 520px) {
-        .hero {
-          padding-top: 52px;
-        }
-
         .btn {
           width: 100%;
         }
@@ -463,13 +439,11 @@
         <div class="container hero-inner">
           <div>
             <span class="eyebrow">Data Analyst & IT Professional</span>
-            <h1>
-              Hello, I'm <span class="highlight">Walter Timilay Bananga</span>
-            </h1>
+            <h1>Hello, I'm <span class="highlight">Walter Timilay Bananga</span></h1>
             <p class="lead">
               I am a data science professional with strong expertise in data analysis,
-              website development, and IT support. I help organizations turn raw data
-              into actionable insights and deliver efficient digital support services.
+              web design, graphic design, and IT support. I transform raw data into insights,
+              create digital experiences, and support organizations with practical technical solutions.
             </p>
             <div class="cta-row">
               <a class="btn btn-primary" href="#projects">View Projects</a>
@@ -492,7 +466,7 @@
                   <div class="label">Work Roles</div>
                 </div>
                 <div class="mini-stat">
-                  <div class="number">5+</div>
+                  <div class="number">6+</div>
                   <div class="label">Core Skills</div>
                 </div>
                 <div class="mini-stat">
@@ -511,10 +485,10 @@
           <div class="about-grid">
             <div class="panel">
               <p>
-                I am a data science student and professional with strong knowledge in
-                data analysis, reporting, database management, and creating webpages.
-                I enjoy using data to solve real-world problems and improving
-                operational efficiency through digital systems and analytics.
+                I am a data science professional with strong knowledge in data analysis,
+                reporting, database management, graphic design, and website creation.
+                I enjoy turning raw data into clear insights and building digital tools that
+                improve operational efficiency and communication.
               </p>
             </div>
             <div class="panel">
@@ -542,17 +516,21 @@
                 <span class="skill-chip">Machine Learning</span>
                 <span class="skill-chip">Excel</span>
                 <span class="skill-chip">HTML</span>
+                <span class="skill-chip">Graphic Design</span>
+                <span class="skill-chip">Web Design</span>
               </div>
             </div>
             <div class="panel">
-              <h3>Data Analysis & Tools</h3>
+              <h3>Data Analysis & Design Tools</h3>
               <div class="skills-wrap">
                 <span class="skill-chip">Data Collection</span>
                 <span class="skill-chip">Data Cleaning</span>
                 <span class="skill-chip">Statistical Analysis</span>
                 <span class="skill-chip">Data Visualization</span>
                 <span class="skill-chip">Database Management</span>
-                <span class="skill-chip">Pivot Tables</span>
+                <span class="skill-chip">Canva</span>
+                <span class="skill-chip">Figma</span>
+                <span class="skill-chip">Brand Design</span>
               </div>
             </div>
           </div>
@@ -566,30 +544,27 @@
             <article class="project-card">
               <h3>Customer Segmentation</h3>
               <p>
-                This project groups telecommunication customers into specific segments to
-                improve service delivery and enhance customer targeting strategies.
+                This project groups telecommunication customers into specific segments to improve
+                service delivery and help organizations target services more effectively.
               </p>
               <div class="project-meta">
                 <span>Python</span>
                 <span>Data Analysis</span>
                 <span>Customer Insights</span>
               </div>
-              <a class="project-link" href="https://customer-segmentation-qw9j.onrender.com/" target="_blank" rel="noreferrer">
-                View Project →
-              </a>
+              <a class="project-link" href="https://customer-segmentation-qw9j.onrender.com/" target="_blank" rel="noreferrer">View Project →</a>
             </article>
 
             <article class="project-card">
               <h3>Portfolio Website</h3>
               <p>
-                A modern personal portfolio website designed to showcase my technical
-                skills, work history, achievements, and project experience in a clean,
-                professional style.
+                A modern portfolio website showcase that highlights my technical skills,
+                experience, and creative work in a clean and professional format.
               </p>
               <div class="project-meta">
                 <span>HTML</span>
                 <span>CSS</span>
-                <span>Web Design</span>
+                <span>Graphic Design</span>
               </div>
               <a class="project-link" href="#contact">Build with Me →</a>
             </article>
@@ -605,10 +580,10 @@
               <h3>Football Data Analyst</h3>
               <p><strong>Sokametrics</strong></p>
               <ul>
-                <li>Ensured real-time accuracy and consistency of sports data.</li>
-                <li>Maintained structured databases of match events and player metrics.</li>
-                <li>Worked with analysis teams to prepare reports and performance insights.</li>
-                <li>Supported data-driven decision-making for reporting and analysis.</li>
+                <li>Ensured the accuracy and consistency of sports data.</li>
+                <li>Maintained databases of match events and player performance.</li>
+                <li>Collaborated with teams to prepare reports and analysis.</li>
+                <li>Supported data-driven decision-making for reporting purposes.</li>
               </ul>
             </article>
 
@@ -616,10 +591,10 @@
               <h3>IT Assistant</h3>
               <p><strong>Morogoro Municipal Council</strong></p>
               <ul>
-                <li>Provided technical support and troubleshooting for hardware, software, and network issues.</li>
-                <li>Maintained digital records and assisted with database updates.</li>
-                <li>Supported IT-related tasks and improved day-to-day office efficiency.</li>
-                <li>Helped maintain computer systems and office equipment.</li>
+                <li>Provided technical support for hardware, software, and network issues.</li>
+                <li>Maintained digital records and updated databases.</li>
+                <li>Supported office systems and improved operational efficiency.</li>
+                <li>Helped ensure smooth day-to-day IT operations in the department.</li>
               </ul>
             </article>
           </div>
@@ -658,9 +633,9 @@
               <h3>Availability</h3>
               <p>
                 I am open to opportunities in data analysis, business intelligence,
-                IT support, and digital solutions. I am available for freelance,
-                internship, and full-time roles where I can contribute my analytical
-                and technical skills.
+                IT support, and digital design. I am available for internship,
+                freelance, and full-time roles where I can contribute my technical,
+                analytical, and creative skills.
               </p>
             </div>
           </div>
