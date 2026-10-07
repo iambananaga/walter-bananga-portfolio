@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Walter Timilay Bananga | Data Analyst & IT</title>
+    <meta
+      name="description"
+      content="Portfolio of Walter Timilay Bananga, Data Analyst and IT professional specializing in data analysis, dashboard reporting, web development and IT support."
+    />
+    <style>
+      :root {
+        --bg: #060b17;
+        --bg-soft: #101a2d;
+        --panel: #0f1d32;
+        --panel-alt: #162742;
+        --primary: #123d76;
+        --primary-soft: #1a5aa6;
+        --accent: #dfe9f7;
+        --text: #eaf2ff;
+        --muted: #b5c7df;
+        --line: rgba(255, 255, 255, 0.12);
+        --shadow: 0 20px 45px rgba(3, 8, 18, 0.45);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: linear-gradient(180deg, #040b14 0%, #0b1422 100%);
+        color: var(--text);
+        line-height: 1.6;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      img {
+        max-width: 100%;
+        display: block;
+      }
+
+      .container {
+        width: min(1100px, calc(100% - 32px));
+        margin: 0 auto;
+      }
+
+      .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        backdrop-filter: blur(12px);
+        background: rgba(6, 11, 23, 0.8);
+        border-bottom: 1px solid var(--line);
+      }
+
+      .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 72px;
+      }
+
+      .brand {
+        font-size: 1.15rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 24px;
+        font-size: 0.95rem;
+        color: var(--muted);
+      }
+
+      .nav-links a {
+        transition: color 0.2s ease;
+      }
+
+      .nav-links a:hover {
+        color: var(--text);
+      }
+
+      .hero {
+        padding: 80px 0 50px;
+      }
+
+      .hero-inner {
+        display: grid;
+        grid-template-columns: 1.4fr 0.9fr;
+        align-items: center;
+        gap: 36px;
+      }
+
+      .eyebrow {
+        display: inline-block;
+        color: var(--accent);
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid var(--line);
+        padding: 8px 14px;
+        border-radius: 999px;
+        font-size: 0.78rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        font-size: clamp(2.5rem, 6vw, 4.6rem);
+        line-height: 1.05;
+        margin: 18px 0 14px;
+        letter-spacing: -0.05em;
+      }
+
+      .highlight {
+        color: #90b7ff;
+      }
+
+      .lead {
+        max-width: 620px;
+        font-size: 1.08rem;
+        color: var(--muted);
+        margin-bottom: 28px;
+      }
+
+      .cta-row {
+        display: flex;
+        gap: 18px;
+        flex-wrap: wrap;
+        margin-top: 12px;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 48px;
+        padding: 0 20px;
+        border-radius: 10px;
+        font-weight: 700;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      .btn:hover {
+        transform: translateY(-2px);
+      }
+
+      .btn-primary {
+        background: linear-gradient(135deg, var(--primary-soft), #5a8fe0);
+        color: white;
+        box-shadow: var(--shadow);
+      }
+
+      .btn-secondary {
+        border: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.02);
+        color: var(--text);
+      }
+
+      .hero-card {
+        background: linear-gradient(180deg, rgba(19, 39, 64, 0.96), rgba(12, 20, 34, 0.96));
+        border: 1px solid var(--line);
+        border-radius: 22px;
+        box-shadow: var(--shadow);
+        overflow: hidden;
+      }
+
+      .card-top {
+        background: linear-gradient(135deg, #173c67, #0e2140);
+        padding: 24px 26px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .card-top h3 {
+        margin: 0;
+        font-size: 1rem;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: #d7e8ff;
+      }
+
+      .profile-box {
+        padding: 26px;
+      }
+
+      .profile-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 18px;
+      }
+
+      .mini-stat {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        padding: 18px;
+      }
+
+      .number {
+        font-size: 1.7rem;
+        font-weight: 700;
+        margin-bottom: 6px;
+      }
+
+      .label {
+        color: var(--muted);
+        font-size: 0.8rem;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+
+      section {
+        padding: 32px 0 20px;
+      }
+
+      .section-title {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin: 0 0 22px;
+      }
+
+      .section-title::before {
+        content: "";
+        width: 12px;
+        height: 12px;
+        background: linear-gradient(135deg, #7db2ff, #234e8e);
+        border-radius: 50%;
+        display: inline-block;
+        box-shadow: 0 0 18px rgba(125, 178, 255, 0.7);
+      }
+
+      .about-grid,
+      .content-grid {
+        display: grid;
+        grid-template-columns: 1.1fr 1fr;
+        gap: 28px;
+      }
+
+      .panel {
+        background: rgba(17, 25, 38, 0.92);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 26px 24px;
+        box-shadow: var(--shadow);
+      }
+
+      .panel p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 1rem;
+      }
+
+      .info-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        gap: 14px;
+      }
+
+      .info-list li {
+        background: rgba(255, 255, 255, 0.025);
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 12px 14px;
+        display: flex;
+        justify-content: space-between;
+        gap: 24px;
+      }
+
+      .info-list span:first-child {
+        color: var(--text);
+        font-weight: 700;
+      }
+
+      .info-list span:last-child {
+        color: var(--muted);
+        text-align: right;
+      }
+
+      .skills-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .skill-chip {
+        background: rgba(125, 178, 255, 0.11);
+        border: 1px solid rgba(125, 178, 255, 0.35);
+        color: #eaf3ff;
+        border-radius: 999px;
+        padding: 10px 14px;
+        font-size: 0.9rem;
+      }
+
+      .projects-grid,
+      .experience-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px;
+      }
+
+      .project-card,
+      .exp-card {
+        background: rgba(17, 25, 38, 0.92);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 22px;
+        box-shadow: var(--shadow);
+      }
+
+      .project-card h3,
+      .exp-card h3 {
+        margin: 0 0 8px;
+        font-size: 1.3rem;
+      }
+
+      .project-card p,
+      .exp-card p,
+      .exp-card li {
+        color: var(--muted);
+      }
+
+      .project-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin: 14px 0 0;
+      }
+
+      .project-meta span {
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 7px 10px;
+        font-size: 0.75rem;
+        color: #dfeafc;
+      }
+
+      .project-link {
+        display: inline-block;
+        margin-top: 16px;
+        color: #a8d0ff;
+        font-weight: 700;
+      }
+
+      .exp-card ul {
+        margin: 12px 0 0;
+        padding-left: 18px;
+      }
+
+      .contact-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+      }
+
+      .contact-item {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        padding: 16px 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .contact-item:last-child {
+        border-bottom: none;
+      }
+
+      .contact-icon {
+        width: 42px;
+        height: 42px;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(125, 178, 255, 0.12);
+        border: 1px solid rgba(125, 178, 255, 0.25);
+        font-weight: 700;
+      }
+
+      .contact-item strong {
+        display: block;
+        margin-bottom: 4px;
+      }
+
+      .footer {
+        border-top: 1px solid var(--line);
+        margin-top: 28px;
+        padding: 22px 0 40px;
+        color: var(--muted);
+        text-align: center;
+      }
+
+      @media (max-width: 900px) {
+        .hero-inner,
+        .about-grid,
+        .content-grid,
+        .projects-grid,
+        .experience-grid,
+        .contact-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .nav {
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 12px;
+          padding: 12px 0;
+        }
+
+        .nav-links {
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+      }
+
+      @media (max-width: 520px) {
+        .hero {
+          padding-top: 52px;
+        }
+
+        .btn {
+          width: 100%;
+        }
+
+        .cta-row {
+          display: grid;
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav">
+        <div class="brand">Walter Bananga</div>
+        <nav class="nav-links" aria-label="Main navigation">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#experience">Experience</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-inner">
+          <div>
+            <span class="eyebrow">Data Analyst & IT Professional</span>
+            <h1>
+              Hello, I'm <span class="highlight">Walter Timilay Bananga</span>
+            </h1>
+            <p class="lead">
+              I am a data science professional with strong expertise in data analysis,
+              website development, and IT support. I help organizations turn raw data
+              into actionable insights and deliver efficient digital support services.
+            </p>
+            <div class="cta-row">
+              <a class="btn btn-primary" href="#projects">View Projects</a>
+              <a class="btn btn-secondary" href="#contact">Contact Me</a>
+            </div>
+          </div>
+
+          <div class="hero-card" aria-label="Profile summary">
+            <div class="card-top">
+              <h3>Professional Overview</h3>
+            </div>
+            <div class="profile-box">
+              <div class="profile-grid">
+                <div class="mini-stat">
+                  <div class="number">4+</div>
+                  <div class="label">Years Learning</div>
+                </div>
+                <div class="mini-stat">
+                  <div class="number">2</div>
+                  <div class="label">Work Roles</div>
+                </div>
+                <div class="mini-stat">
+                  <div class="number">5+</div>
+                  <div class="label">Core Skills</div>
+                </div>
+                <div class="mini-stat">
+                  <div class="number">1</div>
+                  <div class="label">Portfolio</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about">
+        <div class="container">
+          <h2 class="section-title">About Me</h2>
+          <div class="about-grid">
+            <div class="panel">
+              <p>
+                I am a data science student and professional with strong knowledge in
+                data analysis, reporting, database management, and creating webpages.
+                I enjoy using data to solve real-world problems and improving
+                operational efficiency through digital systems and analytics.
+              </p>
+            </div>
+            <div class="panel">
+              <ul class="info-list">
+                <li><span>Email</span><span>walterbananga7@gmail.com</span></li>
+                <li><span>Phone</span><span>+255 676 972 814</span></li>
+                <li><span>Nationality</span><span>Tanzanian</span></li>
+                <li><span>Languages</span><span>English, Kiswahili</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills">
+        <div class="container">
+          <h2 class="section-title">Skills</h2>
+          <div class="content-grid">
+            <div class="panel">
+              <h3>Data Science & Programming</h3>
+              <div class="skills-wrap">
+                <span class="skill-chip">Python</span>
+                <span class="skill-chip">R Programming</span>
+                <span class="skill-chip">SQL</span>
+                <span class="skill-chip">Machine Learning</span>
+                <span class="skill-chip">Excel</span>
+                <span class="skill-chip">HTML</span>
+              </div>
+            </div>
+            <div class="panel">
+              <h3>Data Analysis & Tools</h3>
+              <div class="skills-wrap">
+                <span class="skill-chip">Data Collection</span>
+                <span class="skill-chip">Data Cleaning</span>
+                <span class="skill-chip">Statistical Analysis</span>
+                <span class="skill-chip">Data Visualization</span>
+                <span class="skill-chip">Database Management</span>
+                <span class="skill-chip">Pivot Tables</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects">
+        <div class="container">
+          <h2 class="section-title">Featured Projects</h2>
+          <div class="projects-grid">
+            <article class="project-card">
+              <h3>Customer Segmentation</h3>
+              <p>
+                This project groups telecommunication customers into specific segments to
+                improve service delivery and enhance customer targeting strategies.
+              </p>
+              <div class="project-meta">
+                <span>Python</span>
+                <span>Data Analysis</span>
+                <span>Customer Insights</span>
+              </div>
+              <a class="project-link" href="https://customer-segmentation-qw9j.onrender.com/" target="_blank" rel="noreferrer">
+                View Project →
+              </a>
+            </article>
+
+            <article class="project-card">
+              <h3>Portfolio Website</h3>
+              <p>
+                A modern personal portfolio website designed to showcase my technical
+                skills, work history, achievements, and project experience in a clean,
+                professional style.
+              </p>
+              <div class="project-meta">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>Web Design</span>
+              </div>
+              <a class="project-link" href="#contact">Build with Me →</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="experience">
+        <div class="container">
+          <h2 class="section-title">Experience</h2>
+          <div class="experience-grid">
+            <article class="exp-card">
+              <h3>Football Data Analyst</h3>
+              <p><strong>Sokametrics</strong></p>
+              <ul>
+                <li>Ensured real-time accuracy and consistency of sports data.</li>
+                <li>Maintained structured databases of match events and player metrics.</li>
+                <li>Worked with analysis teams to prepare reports and performance insights.</li>
+                <li>Supported data-driven decision-making for reporting and analysis.</li>
+              </ul>
+            </article>
+
+            <article class="exp-card">
+              <h3>IT Assistant</h3>
+              <p><strong>Morogoro Municipal Council</strong></p>
+              <ul>
+                <li>Provided technical support and troubleshooting for hardware, software, and network issues.</li>
+                <li>Maintained digital records and assisted with database updates.</li>
+                <li>Supported IT-related tasks and improved day-to-day office efficiency.</li>
+                <li>Helped maintain computer systems and office equipment.</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <div class="container">
+          <h2 class="section-title">Contact</h2>
+          <div class="contact-grid">
+            <div class="panel">
+              <div class="contact-item">
+                <div class="contact-icon">@</div>
+                <div>
+                  <strong>Email</strong>
+                  <span>walterbananga7@gmail.com</span>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-icon">☎</div>
+                <div>
+                  <strong>Phone</strong>
+                  <span>+255 676 972 814</span>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-icon">⌂</div>
+                <div>
+                  <strong>Location</strong>
+                  <span>Tanzania</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="panel">
+              <h3>Availability</h3>
+              <p>
+                I am open to opportunities in data analysis, business intelligence,
+                IT support, and digital solutions. I am available for freelance,
+                internship, and full-time roles where I can contribute my analytical
+                and technical skills.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">© 2026 Walter Timilay Bananga | Data Analyst & IT Professional</div>
+    </footer>
+  </body>
+</html>
